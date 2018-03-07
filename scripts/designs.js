@@ -145,11 +145,11 @@ function eraseOrPaint(cell) {
    * reset button code
    */
   resetButton.on("click", function() {
-    // $('td').css("background-color", "#fff");
+    $('td').css("background-color", "#fff");
     colorPicker.val(defaultColor);
     color = defaultColor;
     imageDiv.empty();
-    table.empty();
+   // table.empty();
    // previewButton.add(downloadButton).css("display", "none");
     downloadButton.css({ "pointer-events": "none", "opacity": "0.5" });
     borderColorPicker.val(defaultColor);
