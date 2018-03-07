@@ -165,7 +165,7 @@ function eraseOrPaint(cell) {
       {
         opacity: 1
       },
-      2000
+      800
     );
   });
 
@@ -177,7 +177,7 @@ function eraseOrPaint(cell) {
       {
         opacity: 0
       },
-      2000,
+      800,
       function() {
         $(this).css("display", "none");
       }
