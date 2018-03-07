@@ -96,6 +96,8 @@ footer {
   bottom: 50px;
   right: 15px;
   position: fixed;
+  background-color: white;
+  border-radius: 100%;
 }
 .fa-question-circle :hover {
   opacity: 0.8;
