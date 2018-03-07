@@ -114,6 +114,7 @@ function eraseOrPaint(cell) {
     );
 
     previewButton.add(downloadButton).css("display", "inline");
+    downloadButton.css({ "pointer-events": "none", "opacity": "0.5" });
     imageDiv.empty();
 
     return false;
@@ -149,7 +150,8 @@ function eraseOrPaint(cell) {
     color = defaultColor;
     imageDiv.empty();
     table.empty();
-    previewButton.add(downloadButton).css("display", "none");
+   // previewButton.add(downloadButton).css("display", "none");
+    downloadButton.css({ "pointer-events": "none", "opacity": "0.5" });
     borderColorPicker.val(defaultColor);
     borderColor=defaultColor;
   });
