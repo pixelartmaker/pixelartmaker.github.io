@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Pixel Art Maker!</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/jwarby/jquery-awesome-cursor/master/dist/jquery.awesome-cursor.min.js"></script>
+    <script src="scripts/html2canvas.min.js" type="text/javascript"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Pixel Art Maker</h1>
+    </header>
+    <main>
+        <div>
+            <h2>Choose Grid Size</h2>
+            <form id="sizePicker">
+                <div class="inputField">
+                    <label> Grid Height:</label>
+                    <input type="number" id="inputHeight" name="height" min="1" value="1" max="30">
+                </div>
+                <div class="inputField">
+                    <label> Grid Width:</label>
+                    <input type="number" id="inputWidth" name="width" min="1" value="1" max="30">
+                </div>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
+            <h2>Pick A Color</h2>
+            <input type="color" value="#8A2BE2" id="colorPicker">
+
+        </div>
+        <div class="canvas">
+            <h2>Design Canvas</h2>
+
+            <div id="toolBox">
+                <span id="borderSpan">Border Color:
+                    <input type="color" value="#8A2BE2" id="borderColorPicker" autocomplete="off">
+                </span>
+                <span>Paint Brush</span>
+                <input type="radio" name="options" id="paint-brush" value="brush" autocomplete="off" checked>
+                <span>Eraser</span>
+                <input type="radio" name="options" id="eraser" autocomplete="off" value="eraser">
+            </div>
+            <div id="tableBox">
+
+                <table id="pixelCanvas"></table>
+            </div>
+        </div>
+        <div id="previewImage">
+        </div>
+
+        <button id="previewButton">Preview</button>
+        <a id="downloadButton" href="#">Download</a>
+
+        <div id="infoBox">
+            <span class="close">
+                <i class="far fa-times-circle"></i>
+            </span>
+            <h2>How To Use?</h2>
+            <ol>
+                <li>Select Grid Size and click submit to Create your canvas</li>
+                <li>Select Color from color Picker</li>
+                <li>Select Border color from border color Picker</li>
+                <li>To paint on grid, Click on paint brush radio button</li>
+                <li>To paint single grid do single mouse click</li>
+                <li>To paint like a brush, double click mouse and drag the mouse on grid to paint multiple cells in one stroke</li>
+                <li>To erase the pixel art, Click on Eraser radio button </li>
+                <li>To erase single grid do single mouse click</li>
+                <li>To erase multiple cells in one stroke, double click mouse and drag the mouse on grid to erase</li>
+                <li>Click reset to reset Canvas </li>
+                <li>Click Preview button to preview the pixel art</li>
+                <li>To download the image, click Download button and save or open the image</li>
+            </ol>
+        </div>
+    </main>
+    <footer>
+        <p>Designed and developed by
+            <a href="https://www.linkedin.com/in/sukhjinder-arora">Sukhjinder Arora</a>
+        </p>
+        <span class="info">
+            <i class="fas fa-question-circle"></i>
+        </span>
+    </footer>
+
+    <script src="scripts/designs.js" type="text/javascript"></script>
+</body>
+
+</html>
