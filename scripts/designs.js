@@ -77,6 +77,7 @@ $(document).ready(function () {
             markUp += "</tr>";
         }
         table.html(markUp);
+        checkPaintBrush();
         // setting the border color of table
         $("table,tr,td").css("border-color", borderColor);
 
