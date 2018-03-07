@@ -154,6 +154,7 @@ function eraseOrPaint(cell) {
     downloadButton.css({ "pointer-events": "none", "opacity": "0.5" });
     borderColorPicker.val(defaultColor);
     borderColor=defaultColor;
+    $("table,tr,td").css("border-color", borderColor);
   });
 
   /**
