@@ -58,7 +58,7 @@ function eraseOrPaint(cell) {
   if (paintBrush.prop("checked")) {
     cell.css("background-color", color);
   } else {
-    cell.css("background-color", "#fff");
+    cell.css("background-color", colorTransparent);
   }
 }
   
