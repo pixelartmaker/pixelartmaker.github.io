@@ -211,7 +211,6 @@ function eraseOrPaint(cell) {
   gridColorPicker.change(function () {
         gridColor=$(this).val();
         table.css("background-color", gridColor);
-
     });
   
   /**
