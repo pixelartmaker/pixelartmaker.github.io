@@ -19,6 +19,7 @@ const previewButton = $("#previewButton");
 const toolBoxContainer = $("#toolBox");
 const borderColorPicker = $("#borderColorPicker");
 const paintBrush = $("#paint-brush");
+const colorTransparent="rgba(256,256,256,0)";
 
 /* variables for color, height, width and markup field */
 let isMouseDown = false;
@@ -146,7 +147,7 @@ function eraseOrPaint(cell) {
    * reset button code
    */
   resetButton.on("click", function() {
-    $('td').css("background-color", "#fff");
+    $('td').css("background-color", colorTransparent);
     colorPicker.val(defaultColor);
     color = defaultColor;
     imageDiv.empty();
