@@ -43,10 +43,10 @@ function checkPaintBrush() {
     });
   } else {
     table.awesomeCursor("eraser", {
-      flip: "vertical",
+      flip: "horizontal",
       color: "black",
       size: 18,
-      rotate: 90
+      rotate: 45
     });
   }
 }
