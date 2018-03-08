@@ -78,6 +78,12 @@ div.inputField {
 a {
   text-decoration: none;
 }
+.canvas {
+    margin-top: 30px;
+}
+label {
+    cursor: pointer;
+}
 footer {
   position: absolute;
   bottom: 0;
@@ -178,8 +184,11 @@ footer {
     height: 65vh;
     overflow: scroll;
   }
-  #borderSpan {
+  #borderSpan, #blockColorPicker {
     display: block;
     margin-bottom: 10px;
   }
+  #colorPicker {
+    margin-left: 12px;
+}
 }
