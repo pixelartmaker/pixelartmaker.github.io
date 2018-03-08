@@ -61,11 +61,6 @@ input[type="reset"] {
   font-size: 16px;
   font-weight: lighter;
 }
-input[type="submit"]:hover,
-input[type="reset"]:hover {
-  background: blueviolet;
-  color: white;
-}
 header {
   color: blueviolet;
 }
@@ -153,9 +148,12 @@ footer {
   opacity: 0.5;
 }
 #previewButton:hover,
-#downloadButton:hover {
-  background: blueviolet;
-  color: white;
+#downloadButton:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background: blueviolet;
+    color: white;
+    transition: background 0.5s;
 }
 #previewImage {
   margin-top: 20px;
