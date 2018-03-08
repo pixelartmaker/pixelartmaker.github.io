@@ -206,6 +206,7 @@ function eraseOrPaint(cell) {
    * code for preview and download the pixel art as png image.
    */
   previewButton.on("click", function() {
+    imageDiv.empty();
     // $("table,tr,td").css("border-color","#fff");
     html2canvas(tableContainer.get(0)).then(function(canvas) {
       imageDiv.html(canvas);
