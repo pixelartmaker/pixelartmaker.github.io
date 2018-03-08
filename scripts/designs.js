@@ -20,6 +20,8 @@ const toolBoxContainer = $("#toolBox");
 const borderColorPicker = $("#borderColorPicker");
 const paintBrush = $("#paint-brush");
 const colorTransparent="rgba(256,256,256,0)";
+const gridColorPicker=$('#gridColorPicker')
+
 
 /* variables for color, height, width and markup field */
 let isMouseDown = false;
@@ -30,6 +32,7 @@ let color = defaultColor;
 let borderColor = defaultColor;
 let getCanvas;
 let downloadCount=0;
+let gridColor="white";
 
 /* jQuery ready function for executing JS code only when document is fully loaded */
 $(document).ready(function() {
@@ -102,6 +105,7 @@ function eraseOrPaint(cell) {
       }
       markUp += "</tr>";
     }
+    table.css("background-color",gridColor);
     table.html(markUp);
     checkPaintBrush();
     // setting the border color of table
@@ -203,6 +207,13 @@ function eraseOrPaint(cell) {
     borderColor = $(this).val();
     $("table,tr,td").css("border-color", borderColor);
   });
+  
+  gridColorPicker.change(function () {
+        gridColor=$(this).val();
+        table.css("background-color", gridColor);
+
+    });
+  
   /**
    * code for preview and download the pixel art as png image.
    */
