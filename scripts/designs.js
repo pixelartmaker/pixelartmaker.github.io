@@ -33,6 +33,7 @@ let borderColor = defaultColor;
 let getCanvas;
 let downloadCount=0;
 let gridColor="white";
+let imageName = "pixel_art.jpeg";
 
 /* jQuery ready function for executing JS code only when document is fully loaded */
 $(document).ready(function() {
