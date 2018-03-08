@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -43,21 +43,25 @@
                 <input type="submit" value="Submit">
                 <input type="reset" value="Reset">
             </form>
-            <h2>Pick A Color</h2>
-            <input type="color" value="#8A2BE2" id="colorPicker">
-
         </div>
         <div class="canvas">
             <h2>Design Canvas</h2>
 
             <div id="toolBox">
-                <span id="borderSpan">Border Color:
-                    <input type="color" value="#8A2BE2" id="borderColorPicker" autocomplete="off">
+                <form id="tools" autocomplete="off">
+                <span id="blockColorPicker"><label for="colorPicker">Block Color</label>
+                    <input type="color" value="#8A2BE2" id="colorPicker" >
                 </span>
-                <span>Paint Brush</span>
-                <input type="radio" name="options" id="paint-brush" value="brush" autocomplete="off" checked>
-                <span>Eraser</span>
-                <input type="radio" name="options" id="eraser" autocomplete="off" value="eraser">
+                <span id="borderSpan"><label for="borderColorPicker">Border Color:</label>
+                    <input type="color" value="#8A2BE2" id="borderColorPicker" >
+                </span>
+                <span><label for="paint-brush">Paint Brush</label>
+                    <input type="radio" name="options" id="paint-brush" value="brush" checked>
+                </span>
+                <span><label for="eraser">Eraser</label>
+                    <input type="radio" name="options" id="eraser" value="eraser">
+                </span>
+                </form>
             </div>
             <div id="tableBox">
 
