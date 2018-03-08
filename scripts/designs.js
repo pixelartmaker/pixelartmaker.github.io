@@ -39,7 +39,7 @@ function checkPaintBrush() {
       flip: "vertical",
       color: "black",
       size: 18,
-      rotate: 90
+      rotate: 45
     });
   } else {
     table.awesomeCursor("eraser", {
@@ -155,6 +155,8 @@ function eraseOrPaint(cell) {
     borderColorPicker.val(defaultColor);
     borderColor=defaultColor;
     $("table,tr,td").css("border-color", borderColor);
+    paintBrush.prop('checked',true);
+    checkPaintBrush();
   });
 
   /**
