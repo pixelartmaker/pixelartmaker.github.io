@@ -216,13 +216,15 @@ function eraseOrPaint(cell) {
   });
 
   downloadButton.on("click", function() {
+    let imageName="pixel_art"+downloadCount+".png";
+     ++downloadCount;
     var imgageData = getCanvas.toDataURL("image/png");
     // Now browser starts downloading it instead of just showing it
     var newData = imgageData.replace(
       /^data:image\/png/,
       "data:application/octet-stream"
     );
-    downloadButton.attr("download", "pixel_art.png").attr("href", newData);
+    downloadButton.attr("download", imageName).attr("href", newData);
   });
 
   /**
