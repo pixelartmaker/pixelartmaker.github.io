@@ -28,6 +28,7 @@ let markUp = "";
 let color = defaultColor;
 let borderColor = defaultColor;
 let getCanvas;
+let downloadCount=0;
 
 /* jQuery ready function for executing JS code only when document is fully loaded */
 $(document).ready(function() {
