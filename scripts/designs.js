@@ -216,29 +216,44 @@ function eraseOrPaint(cell) {
   /**
    * code for preview and download the pixel art as png image.
    */
-  previewButton.on("click", function() {
-    imageDiv.empty();
-    // $("table,tr,td").css("border-color","#fff");
-    html2canvas(tableContainer.get(0)).then(function(canvas) {
-      imageDiv.html(canvas);
-      getCanvas = canvas;
-      // $("table,tr,td").css("border-color",borderColor);
+ previewButton.on('click', function () {
+        imageDiv.empty();
+        html2canvas(tableContainer.get(0), {
+            useCORS: true
+        }).then(function (canvas) {
+            imageDiv.html(canvas);
+            getCanvas = canvas;
+        });
+        downloadButton.css({ "pointer-events": "visible", "opacity": "1" });
     });
 
-    downloadButton.css({ "pointer-events": "visible", opacity: "1" });
-  });
+   downloadButton.on('click', function () {
+        if (navigator.msSaveBlob) {
+            console.log('this is IE');
+            let URL = window.URL;
+            let BlobBuilder = window.MSBlobBuilder;
+            navigator.saveBlob = navigator.msSaveBlob;
+            let imgBlob = getCanvas.msToBlob();
+            if (BlobBuilder && navigator.saveBlob) {
+                var showSave = function (data, name, mimetype) {
+                    let builder = new BlobBuilder();
+                    builder.append(data);
+                    let blob = builder.getBlob(mimetype || "application/octet-stream");
+                    if (!name)
+                        name = "Download.bin";
+                    navigator.saveBlob(blob, name);
+                };
+                showSave(imgBlob, 'pixel_art.png', "image/png");
+            }
+        } else {
 
-  downloadButton.on("click", function() {
-    let imageName="pixel_art"+downloadCount+".png";
-     ++downloadCount;
-    var imgageData = getCanvas.toDataURL("image/png");
-    // Now browser starts downloading it instead of just showing it
-    var newData = imgageData.replace(
-      /^data:image\/png/,
-      "data:application/octet-stream"
-    );
-    downloadButton.attr("download", imageName).attr("href", newData);
-  });
+            let img = getCanvas.toDataURL("image/jpeg")
+            img = img.replace('data:image/jpeg;base64,', '')
+            let finalImageSrc = 'data:image/jpeg;base64,' + img
+            downloadButton.attr("download", imageName).attr('href', finalImageSrc);
+        }
+
+    });
 
   /**
    * radio button change event
