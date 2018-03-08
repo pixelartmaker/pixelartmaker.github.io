@@ -152,15 +152,15 @@ function eraseOrPaint(cell) {
    */
   resetButton.on("click", function() {
     $('td').css("background-color", colorTransparent);
-    colorPicker.val(defaultColor);
-    color = defaultColor;
+   // colorPicker.val(defaultColor);
+   // color = defaultColor;
     imageDiv.empty();
    // table.empty();
    // previewButton.add(downloadButton).css("display", "none");
     downloadButton.css({ "pointer-events": "none", "opacity": "0.5" });
-    borderColorPicker.val(defaultColor);
-    borderColor=defaultColor;
-    $("table,tr,td").css("border-color", borderColor);
+   // borderColorPicker.val(defaultColor);
+   // borderColor=defaultColor;
+   // $("table,tr,td").css("border-color", borderColor);
     paintBrush.prop('checked',true);
     checkPaintBrush();
   });
