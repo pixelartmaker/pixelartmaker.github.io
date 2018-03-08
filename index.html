@@ -19,7 +19,6 @@
     <script src="https://cdn.rawgit.com/jwarby/jquery-awesome-cursor/master/dist/jquery.awesome-cursor.min.js"></script>
     <script defer src="scripts/html2canvas.min.js"></script>
     <script defer src="scripts/designs.js"></script>
-   
 
 </head>
 
@@ -48,16 +47,20 @@
 
             <div id="toolBox">
                 <form id="tools" autocomplete="off">
-                <span id="blockColorPicker"><label for="colorPicker">Block Color</label>
+                    <span class="colorSpan"><label for="colorPicker">Block Color</label>
                     <input type="color" value="#8A2BE2" id="colorPicker" >
                 </span>
-                <span id="borderSpan"><label for="borderColorPicker">Border Color:</label>
+                    <span class="colorSpan"><label for="gridColorPicker">Canvas Color</label>
+                    <input type='color'  value="#ffffff" id="gridColorPicker">
+                </span>
+                    <span class="colorSpan"><label for="borderColorPicker">Border Color:</label>
                     <input type="color" value="#8A2BE2" id="borderColorPicker" >
                 </span>
-                <span><label for="paint-brush">Paint Brush</label>
+
+                    <span><label for="paint-brush">Paint Brush</label>
                     <input type="radio" name="options" id="paint-brush" value="brush" checked>
                 </span>
-                <span><label for="eraser">Eraser</label>
+                    <span><label for="eraser">Eraser</label>
                     <input type="radio" name="options" id="eraser" value="eraser">
                 </span>
                 </form>
@@ -103,7 +106,6 @@
         </span>
     </footer>
 
-   
 </body>
 
 </html>
