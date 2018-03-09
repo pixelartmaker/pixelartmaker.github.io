@@ -20,7 +20,10 @@ const toolBoxContainer = $("#toolBox");
 const borderColorPicker = $("#borderColorPicker");
 const paintBrush = $("#paint-brush");
 const colorTransparent = "rgba(256,256,256,0)";
-const gridColorPicker = $('#gridColorPicker')
+const gridColorPicker = $('#gridColorPicker');
+const image=document.getElementById('previewImage');
+
+
 
 
 /* variables for color, height, width and markup field */
@@ -168,9 +171,10 @@ $(document).ready(function() {
         $('td').css("background-color", colorTransparent);
         // colorPicker.val(defaultColor);
         // color = defaultColor;
-        imageDiv.empty();
+        //imageDiv.empty();
         // table.empty();
         // previewButton.add(downloadButton).css("display", "none");
+        image.innerHTML="";
         downloadButton.css({
             "pointer-events": "none",
             "opacity": "0.5"
@@ -232,7 +236,8 @@ $(document).ready(function() {
      * code for preview and download the pixel art as png image.
      */
     previewButton.on('click', function() {
-        imageDiv.empty();
+        //imageDiv.empty();
+        image.innerHTML="";
         html2canvas(tableContainer.get(0), {
             useCORS: true
         }).then(function(canvas) {
