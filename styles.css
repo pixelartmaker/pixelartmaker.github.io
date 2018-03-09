@@ -28,8 +28,8 @@ html {
      border-collapse: collapse;
      margin: 0 auto;
      -webkit-box-shadow: 0 0 20px #b0afab;
--moz-box-shadow: 0 0 20px #b0afab;
-box-shadow: 0 0 20px #b0afab;
+     -moz-box-shadow: 0 0 20px #b0afab;
+     box-shadow: 0 0 20px #b0afab;
 }
  tr {
      height: 20px;
@@ -153,9 +153,9 @@ box-shadow: 0 0 20px #b0afab;
  #previewImage {
      margin-top: 20px;
 }
-#pixelInput {
-   position: relative;
-   top: 5px;
+ #pixelInput {
+     position: relative;
+     top: 5px;
 }
  @media (max-width: 600px) {
      div.inputField {
@@ -192,13 +192,13 @@ box-shadow: 0 0 20px #b0afab;
          width: 200px;
     }
      tr {
-    height: 30px;
-}
-td {
-    width: 30px;
-}
-      #pixelSpan{
-          display: none;
-}
+         height: 30px;
+    }
+     td {
+         width: 30px;
+    }
+     #pixelSpan{
+         display: none;
+    }
 }
  
