@@ -112,9 +112,12 @@ function eraseOrPaint(cell) {
     checkPaintBrush();
     // setting the border color of table
     $("table,tr,td").css("border-color", borderColor);
+     if (window.matchMedia("(min-width: 601px)").matches) {
      $('tr').css("height",""+pixelSize+"px");
       $('td').css("width",""+pixelSize+"px");
 
+  }
+   
     /* animation code for scrolling to canvas */
     html.animate(
       {
