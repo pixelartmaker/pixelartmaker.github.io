@@ -73,14 +73,16 @@ $(document).ready(function() {
     /* code for setting max width for mobile devices */
     if (window.matchMedia("(max-width: 768px)").matches) {
         widthField.attr("max", "10");
+        heightField.attr("max", "50");
     }
 
     /* jQuery window resizing event */
     win.resize(function() {
         if (window.matchMedia("(max-width: 768px)").matches) {
             widthField.attr("max", "10");
+            heightField.attr("max", "50");
         } else {
-            widthField.attr("max", "30");
+            widthField.attr("max", "100");
         }
     });
 
@@ -278,7 +280,7 @@ $(document).ready(function() {
         let value = $(this).val();
         pixelSize = parseInt(value, 10);
         // alert(value);
-        console.log(value);
+       // console.log(value);
         $('tr').css("height", "" + pixelSize + "px");
         $('td').css("width", "" + pixelSize + "px");
     });
