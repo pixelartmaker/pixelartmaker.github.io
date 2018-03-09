@@ -29,7 +29,7 @@ let height;
 let width;
 let markUp = "";
 let color = defaultColor;
-let borderColor = defaultColor;
+let borderColor = "#c0c0c0";
 let getCanvas;
 let downloadCount=0;
 let gridColor="white";
