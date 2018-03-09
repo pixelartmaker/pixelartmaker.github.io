@@ -101,6 +101,7 @@ $(document).ready(function() {
             if (height > 50 || width > 10) return;
         }
         let tablejs = document.getElementById('pixelCanvas');
+        tablejs.innerHTML="";
         markUp = "";
         /* logic for creating canvas grid */
         for (let i = 0; i < height; i++) {
