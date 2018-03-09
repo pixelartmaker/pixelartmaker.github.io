@@ -65,6 +65,8 @@ $(document).ready(function() {
 
     /** check if to paint a cell or erase */
     function eraseOrPaint(cell) {
+         $('td.clicked').removeClass('clicked');
+         cell.addClass("clicked");
         if (paintBrush.prop("checked")) {
             cell.css("background-color", color);
         } else {
@@ -168,16 +170,29 @@ $(document).ready(function() {
 
     /* code for preview of a color on cell*/
     table.on({
-        mouseenter: function() {
+        mouseover: function () {
             // Handle mouseenter...
-            cellBackground=$(this).css("background-color");
-        $(this).css("background-color",color);
+            if (paintBrush.prop('checked')) {
+                cellBackground = $(this).css("background-color");
+                $(this).css("background-color", color);
+            }
+
         },
-        mouseleave: function() {
+        mouseout: function () {
             // Handle mouseleave...
-            $( this ).css("background-color",cellBackground);
-        },
+            if (paintBrush.prop('checked')) {
+                if (!($(this).hasClass("clicked"))) {
+                    $(this).css("background-color", cellBackground);
+                }
+                else{
+                    $(this).removeClass("clicked");
+                    
+                }
+            }
+        }
+
     }, "td");
+
     /**
      * reset button code
      */
