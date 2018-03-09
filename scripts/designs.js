@@ -38,6 +38,8 @@ let downloadCount = 0;
 let gridColor = "white";
 let imageName = "pixel_art.jpeg";
 let pixelSize = 20;
+// expermintal feature may be removed for preview of color on cell
+let cellBackground="";
 
 /* jQuery ready function for executing JS code only when document is fully loaded */
 $(document).ready(function() {
@@ -164,6 +166,18 @@ $(document).ready(function() {
         }
     });
 
+    /* code for preview of a color on cell*/
+    table.on({
+        mouseenter: function() {
+            // Handle mouseenter...
+            cellBackground=$(this).css("background-color");
+        $(this).css("background-color",color);
+        },
+        mouseleave: function() {
+            // Handle mouseleave...
+            $( this ).css("background-color",cellBackground);
+        },
+    }, "td");
     /**
      * reset button code
      */
