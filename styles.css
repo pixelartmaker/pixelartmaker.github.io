@@ -49,7 +49,7 @@ html {
      cursor: auto;
      font-family: "Josefin Sans", sans-serif;
 }
- input[type="submit"], input[type="reset"] {
+ input[type="submit"], input[type="button"] {
      font-family: "Josefin Sans", sans-serif;
      height: 50px;
      width: 100px;
@@ -145,7 +145,7 @@ html {
      pointer-events: none;
      opacity: 0.5;
 }
- #previewButton:hover, #downloadButton:hover, input[type="submit"]:hover, input[type="reset"]:hover {
+ #previewButton:hover, #downloadButton:hover, input[type="submit"]:hover, input[type="button"]:hover {
      background: blueviolet;
      color: white;
      transition: background 0.5s;
