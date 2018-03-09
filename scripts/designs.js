@@ -82,7 +82,7 @@ $(document).ready(function() {
             widthField.attr("max", "10");
             heightField.attr("max", "50");
         } else {
-            widthField.attr("max", "100");
+            widthField.attr("max", "130");
         }
     });
 
@@ -96,7 +96,7 @@ $(document).ready(function() {
          * form validation for input fields height and width
          * so that these are within specified range
          */
-        if (height > 100 || width > 100) return;
+        if (height > 130 || width > 130) return;
         if (window.matchMedia("(max-width: 768px)").matches) {
             if (height > 50 || width > 10) return;
         }
