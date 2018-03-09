@@ -4,7 +4,7 @@ const win = $(window);
 const heightField = $("#inputHeight");
 const widthField = $("#inputWidth");
 const submitButton = $("input[type=submit]");
-const resetButton = $("input[type=reset]");
+const resetButton = $("input[type=button]");
 const defaultColor = "#8A2BE2";
 const colorPicker = $("#colorPicker");
 const tableContainer = $("#tableBox");
