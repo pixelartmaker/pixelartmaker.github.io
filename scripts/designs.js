@@ -100,6 +100,7 @@ $(document).ready(function() {
         if (window.matchMedia("(max-width: 768px)").matches) {
             if (height > 50 || width > 10) return;
         }
+        let tablejs = document.getElementById('pixelCanvas');
         markUp = "";
         /* logic for creating canvas grid */
         for (let i = 0; i < height; i++) {
@@ -109,8 +110,9 @@ $(document).ready(function() {
             }
             markUp += "</tr>";
         }
+        tablejs.innerHTML=markUp;
         table.css("background-color", gridColor);
-        table.html(markUp);
+       // table.html(markUp);
         checkPaintBrush();
         // setting the border color of table
         $("table,tr,td").css("border-color", borderColor);
