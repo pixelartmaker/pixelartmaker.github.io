@@ -34,6 +34,7 @@ let getCanvas;
 let downloadCount=0;
 let gridColor="white";
 let imageName = "pixel_art.jpeg";
+let pixelSize=20;
 
 /* jQuery ready function for executing JS code only when document is fully loaded */
 $(document).ready(function() {
@@ -111,13 +112,15 @@ function eraseOrPaint(cell) {
     checkPaintBrush();
     // setting the border color of table
     $("table,tr,td").css("border-color", borderColor);
+     $('tr').css("height",""+pixelSize+"px");
+      $('td').css("width",""+pixelSize+"px");
 
     /* animation code for scrolling to canvas */
     html.animate(
       {
         scrollTop: toolBoxContainer.offset().top
       },
-      2000
+      800
     );
 
     previewButton.add(downloadButton).css("display", "inline");
@@ -260,4 +263,15 @@ function eraseOrPaint(cell) {
    * radio button change event
    */
   $("input[type=radio]").on("change", checkPaintBrush);
+  
+    $('#pixelInput').on("change",function(){
+ 
+        let value=$(this).val();
+        pixelSize=parseInt(value, 10);
+        // alert(value);
+        console.log(value);
+        $('tr').css("height",""+pixelSize+"px");
+        $('td').css("width",""+pixelSize+"px");
+    });
+    
 });
