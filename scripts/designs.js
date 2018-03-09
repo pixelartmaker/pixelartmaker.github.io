@@ -94,9 +94,9 @@ function eraseOrPaint(cell) {
      * form validation for input fields height and width
      * so that these are within specified range
      */
-    if (height > 30 || width > 30) return;
+    if (height > 100 || width > 100) return;
     if (window.matchMedia("(max-width: 768px)").matches) {
-      if (height > 30 || width > 10) return;
+      if (height > 50 || width > 10) return;
     }
     markUp = "";
     /* logic for creating canvas grid */
