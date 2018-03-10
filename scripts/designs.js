@@ -65,8 +65,6 @@ $(document).ready(function() {
 
     /** check if to paint a cell or erase */
     function eraseOrPaint(cell) {
-         $('td.clicked').removeClass('clicked');
-         cell.addClass("clicked");
         if (paintBrush.prop("checked")) {
             cell.css("background-color", color);
         } else {
@@ -160,6 +158,8 @@ $(document).ready(function() {
 
     table.on("mouseenter click", "td", function(evt) {
         if (evt.type == "click") {
+             $('td.clicked').removeClass('clicked');
+             $(this).addClass("clicked");
             eraseOrPaint($(this));
         } else {
             if (isMouseDown) {
