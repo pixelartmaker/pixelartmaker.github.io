@@ -42,3 +42,6 @@ Visit [ here ] ( https://pixelartmaker.github.io/ ) to draw pixel art.
 - Click Preview button to preview the pixel art as image
 - To download the image, click Download button and save or open the image
 - Make something awesome!
+
+
+This site was built using [GitHub Pages](https://pages.github.com/
