@@ -1,4 +1,4 @@
-# [Pixel Art Maker] (https://pixelartmaker.github.io)
+# Pixel Art Maker https://pixelartmaker.github.io
 
 ## Table of Contents
 
@@ -39,4 +39,4 @@
 - Click reset to reset Canvas
 - Click Preview button to preview the pixel art as image
 - To download the image, click Download button and save or open the image
-- Make something awesome! or something less awesome will do too.
+- Make something awesome!
