@@ -267,10 +267,11 @@ $(document).ready(function() {
      */
     previewButton.on('click', function() {
         //imageDiv.empty();
-        image.innerHTML="";
+        
         html2canvas(tableContainer.get(0), {
             useCORS: true
         }).then(function(canvas) {
+            image.innerHTML="";
             imageDiv.html(canvas);
             getCanvas = canvas;
         });
