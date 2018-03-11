@@ -1,4 +1,4 @@
-# Pixel Art Maker https://pixelartmaker.github.io
+# [Pixel Art Maker] (https://pixelartmaker.github.io)
 
 ## Table of Contents
 
