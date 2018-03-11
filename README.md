@@ -2,6 +2,9 @@
 
 Visit [Here](https://pixelartmaker.github.io/) to draw your pixel art.
 
+## About
+Miss all the pixel perfect art that was popular in the 80's? If so, Pixel Art Maker is for you! Try and replicate old classics like Pac-Man, Mario or make your own art! This is a simple online pixel art editor to help you make pixel art easily. Pixel Art Maker is designed for beginners,and pros who just want to whip something up and share it with friends. If you like making pixel art, and need an online drawing app, then this app is for you.This pixel art maker app is here to promote creativity, but also bring the warm and fuzzy nostalgia associated with old videogames characters.
+
 ## Table of Contents
 
 ### HTML Skills Needed
