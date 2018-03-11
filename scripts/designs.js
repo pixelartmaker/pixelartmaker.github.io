@@ -88,6 +88,7 @@ $(document).ready(function() {
             heightField.attr("max", "50");
         } else {
             widthField.attr("max", "130");
+            heightField.attr("max", "130");
         }
     });
 
