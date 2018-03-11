@@ -1,6 +1,6 @@
-# [Pixel Art Maker] https://pixelartmaker.github.io
+# [Pixel Art Maker](https://pixelartmaker.github.io/)
 
-Visit [ here ] ( https://pixelartmaker.github.io/ ) to draw pixel art.
+Visit [Here](https://pixelartmaker.github.io/) to draw your pixel art.
 
 ## Table of Contents
 
@@ -44,4 +44,4 @@ Visit [ here ] ( https://pixelartmaker.github.io/ ) to draw pixel art.
 - Make something awesome!
 
 
-This site was built using [GitHub Pages](https://pages.github.com/
+This site was built using [GitHub Pages](https://pages.github.com/)
