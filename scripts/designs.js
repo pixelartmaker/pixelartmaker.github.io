@@ -269,7 +269,10 @@ $(document).ready(function() {
         //imageDiv.empty();
         
         html2canvas(tableContainer.get(0), {
-            useCORS: true
+            useCORS: true,
+            async: true,
+            backgroundColor: null,
+            scale: 4
         }).then(function(canvas) {
             image.innerHTML="";
             imageDiv.html(canvas);
