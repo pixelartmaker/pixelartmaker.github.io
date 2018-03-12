@@ -111,7 +111,6 @@ $(document).ready(function() {
         let j=0;
         /* logic for creating canvas grid */
         for (let i = 0; i < height; i++) {
-            markUp += "<tr>";
              while(j < width){ // this loop runs only once
                 cols += "<td></td>";
                 j++;
