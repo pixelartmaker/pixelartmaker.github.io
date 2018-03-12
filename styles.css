@@ -24,6 +24,11 @@ li {
  h2:first-of-type {
      margin-top: 0.5em;
 }
+ #tableBox {
+  display: inline-block;
+  padding: 0 10px;
+  box-sizing: content-box;
+    }
  table, tr, td {
      border: 1px solid #c0c0c0;
 }
