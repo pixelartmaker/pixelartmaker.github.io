@@ -109,13 +109,16 @@ $(document).ready(function() {
         let tablejs = document.getElementById('pixelCanvas');
         tablejs.innerHTML="";
         markUp = "";
+        let cols="";
+        let j=0;
         /* logic for creating canvas grid */
         for (let i = 0; i < height; i++) {
             markUp += "<tr>";
-            for (let j = 0; j < width; j++) {
-                markUp += "<td></td>";
+             while(j < width){ // this loop runs only once
+                cols += "<td></td>";
+                j++;
             }
-            markUp += "</tr>";
+            markUp += "<tr>"+cols+"</tr>";
         }
         tablejs.innerHTML=markUp;
         table.css("background-color", gridColor);
