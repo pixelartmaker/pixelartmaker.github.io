@@ -94,10 +94,8 @@ $(document).ready(function() {
 
     /* jQuery submit button click event */
     submitButton.on("click", function makegrid() {
-        height = heightField.val();
-        height = parseInt(height, 10);
-        width = widthField.val();
-        width = parseInt(width, 10);
+        height = parseInt(heightField.val(), 10);
+        width = parseInt(widthField.val(), 10);
         /**
          * form validation for input fields height and width
          * so that these are within specified range
