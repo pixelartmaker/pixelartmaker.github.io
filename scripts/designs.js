@@ -47,19 +47,9 @@ $(document).ready(function() {
     /** check paint brush or eraser handler */
     function checkPaintBrush() {
         if (paintBrush.prop("checked")) {
-            table.awesomeCursor("paint-brush", {
-                flip: "vertical",
-                color: "black",
-                size: 18,
-                rotate: 45
-            });
+            table.css("cursor",`url(assets/paint-brush.svg),auto`);
         } else {
-            table.awesomeCursor("eraser", {
-                flip: "horizontal",
-                color: "black",
-                size: 18,
-                rotate: 45
-            });
+            table.css("cursor",`url(assets/eraser-tool-for-school.svg),auto`);
         }
     }
 
