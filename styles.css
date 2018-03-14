@@ -98,7 +98,7 @@ li {
 }
  .fa-question-circle {
      color: #8a2be2;
-     font-size: 3em;
+     font-size: 0;
      font-family: "Josefin Sans", sans-serif;
      cursor: pointer;
      bottom: 50px;
